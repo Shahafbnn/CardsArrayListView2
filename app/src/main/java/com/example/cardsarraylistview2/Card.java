@@ -16,6 +16,10 @@ public class Card {
     private int suit; // 0 = c, 1 = d, 2 = h, 3 = s, 4 = j
 
 
+    public int getSuit() {
+        return suit;
+    }
+    public int getValue(){return value;}
 
     public Card(ImageView IV){
         this.IV = IV;
@@ -55,7 +59,7 @@ public class Card {
         // c,d,h and s have 13, and j has 2, all values start from 2
         // 0 = c, 1 = d, 2 = h, 3 = s, 4 = j
         if(last.suit <=3){
-            if(last.value > 13) {
+            if(last.value >= 13) {
                 suit = last.suit + 1;
                 value = 2;
             } // idk if it should be > 12 or 13, may cause bugs.
@@ -119,7 +123,7 @@ public class Card {
         IV.setImageDrawable(drawable);
     }
 
-    public void justFlip(View view, Resources res, String pac){
+    public void justFlip(Resources res, String pac){
         String mDrawableName = "";
         // 0 = c, 1 = d, 2 = h, 3 = s, 4 = j
         if(this.suit == 0) mDrawableName += "c";
