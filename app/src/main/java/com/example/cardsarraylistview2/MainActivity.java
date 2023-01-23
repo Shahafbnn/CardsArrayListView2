@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, View
         Collections.shuffle(deck);
         Card current = deck.get(0);
         int currentIndex = 0;
-        //LV.setAdapter( new ArrayAdapter<Card>(this, android.R.layout.simple_list_item_1, used) );
+        LV.setAdapter( new ArrayAdapter<Card>(this, android.R.layout.simple_list_item_1, deck) );
 
     }
     void updateCurrent(int index){
