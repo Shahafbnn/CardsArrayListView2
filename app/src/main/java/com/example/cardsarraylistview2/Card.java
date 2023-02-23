@@ -148,5 +148,8 @@ public class Card {
         Drawable drawable = res.getDrawable(resID);
         IV.setImageDrawable(drawable);
     }
+    public String toString(){
+        return "suit:" + this.suit +", value:"+ this.value;
+    }
 
 }
